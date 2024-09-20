@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="goback.png" height="70px" width="50px" align="left"
+            style="margin-top: 1.2rem;"></a>
+        <h1>High-Order Functions</h1>
+    </header>
+
+    <section>
+        <h1>Introduction</h1>
+        <ul>
+            <li>high order functions take other functions as arguments or return as output</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Usage</h1>
+        <ul>
+            <li>can be assigned to var</li>
+            <li>can be passed as arguments</li>
+            <li>can be returned as values</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Functions</h1>
+        <div class="row">
+            <div class="column">
+                <h2>foreach()</h2>
+                <ul>
+                    <li>forEach() method takes a callback function as an argumen</li>
+                </ul>
+onst numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function(number) {
+console.log(number);
+});</code></pre>
+            </div>
+            <div class="column">
+                <h2>map()</h2>
+                <ul>
+                    <li>map() method takes a callback function as an argument, which returns a new array with the results of applying the callback function to each element in the original array.</li>
+                </ul>
+                <pre><code>
+const numbers = [1, 2, 3, 4, 5];
+const doubleNumbers = numbers.map(function(number) {
+return number * 2;
+});
+console.log(doubleNumbers); // [2, 4, 6, 8, 10]
+                </code></pre>
+            </div>
+            <div class="column">
+                <h2>filter()</h2>
+                <ul>
+                    <li>filter() method takes a callback function as an argument, which returns a new array with the elements that pass the test implemented by the callback function.</li>
+                </ul>
+                <pre><code>
+const numbers = [1, 2, 3, 4, 5];
+const evenNumbers = numbers.filter(function(number) {
+  return number % 2 === 0;
+});
+console.log(evenNumbers); // [2, 4]
+                </code></pre>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p style="font-size: 18px;">With lots of love and code! || &copy; Khanak Korotania. All Rights Reserved.</p>
+    </footer>
+</body>
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Promises</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <header>
+        <a href="index.html"><img src="goback.png" height="70px" width="50px" align="left"
+            style="margin-top: 1.2rem;"></a>
+        <h1>Promises</h1>
+    </header>
+
+    <section>
+        <h1>Introduction</h1>
+        <ul>
+            <li>A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.</li>
+            <li>Helps in avoiding the complexities of  <a href="https://www.geeksforgeeks.org/what-to-understand-callback-and-callback-hell-in-javascript/" style="color: white;">Callback Hell.</a></li>
+        </ul>
+    </section>
+    <section>
+        <h1>Three States of Promises</h1>
+        <img src="promise.png" height="250px" width="600px">
+    </section> 
+    <section>
+        <div class="row">
+            <div class="column">
+                <h2>Pending</h2>
+                <ul>
+                    <li>The operation is yet to be done.</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Fulfilled</h2>
+                <ul>
+                    <li>The operartion was succesfully completed.</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h2>Rejected</h2>
+                <ul>
+                    <li>The operation failed.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1>Syntax of Promises</h1>
+        <img src="resprom.png" height="250px" width="500px">
+    </section>
+    <section>
+        <h1>Methods of using Promises</h1>
+        <div class="row">
+            <div class="column" style="width: 50%;">
+                <h2>Promise.all()</h2>
+                <ul>
+                    <li>Waits for all promises to fulfill or for any to reject.</li><br>
+                    Example ↓
+                </ul>
+<pre><code>
+Promise.all([promise1, promise2, promise3])
+.then(results => console.log(results))
+.catch(error => console.error(error));
+</code></pre>
+            </div>
+            <div class="column" style="width: 50%;">
+                <h2>Promise.race()</h2>
+                <ul>
+                    <li>Promise.race(): rejects as soon as any of the promises in the array settles.</li><br>
+                    Example ↓
+                </ul>
+<pre><code>
+Promise.race([promise1, promise2])
+.then(result => console.log(result))
+.catch(error => console.error(error));
+</code></pre>    
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p style="font-size: 18px;">With lots of love and code! || &copy; Khanak Korotania. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
